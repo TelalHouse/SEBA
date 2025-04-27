@@ -489,5 +489,6 @@ async def screen_stocks(request: ScreenRequest, current_user: User = Depends(get
             results.extend(vcp_stocks)
         
         if "buy_recommendations" in request.criteria:
-    buy_recommendations_stocks = sepa_engine.get_buy_recommendations(stocks_data)
-    results.extend(buy_recommendations_stocks)
+            buy_recommendations_stocks = sepa_engine.get_buy_recommendations(stocks_data)
+            results.extend(buy_recommendations_stocks)
+
