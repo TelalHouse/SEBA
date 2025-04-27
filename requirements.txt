@@ -13,12 +13,6 @@ sqlalchemy==2.0.9
 redis==4.5.4
 alembic==1.10.3
 
-# مكتبات معالجة البيانات
-ta-lib==0.4.26
-scikit-learn==1.2.2
-matplotlib==3.7.1
-seaborn==0.12.2
-plotly==5.14.1
 
 # مكتبات الذكاء الاصطناعي
 openai==0.27.4
