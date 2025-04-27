@@ -491,4 +491,7 @@ async def screen_stocks(request: ScreenRequest, current_user: User = Depends(get
         if "buy_recommendations" in request.criteria:
             buy_recommendations_stocks = sepa_engine.get_buy_recommendations(stocks_data)
             results.extend(buy_recommendations_stocks)
+    except Exception as e:
+        logger.error(f"خطأ عام أثناء عملية فحص الأسهم: {str(e)}")
+        raise HTTPException(status_code=500, detail="حدث خطأ أثناء تنفيذ عملية فحص الأسهم.")
 
