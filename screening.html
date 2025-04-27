@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فحص الأسهم - SEBA</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- الأنماط المخصصة -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- الترويسة -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-chart-line me-2"></i>SEBA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">لوحة التحكم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.html">تحليل الأسهم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="screening.html">فحص الأسهم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chatbot.html">روبوت المحادثة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عن المشروع</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-light">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">فحص الأسهم</h1>
+            <p class="lead">فحص الأسهم باستخدام معايير محددة مثل Trend Template ونمط VCP للعثور على أفضل فرص الاستثمار في السوق.</p>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container py-5">
+        <!-- نموذج الفحص -->
+        <div class="search-form mb-5">
+            <h2 class="mb-4">معايير الفحص</h2>
+            <form id="screeningForm">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">معايير Trend Template</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="trendTemplate" checked>
+                            <label class="form-check-label" for="trendTemplate">
+                                تطبيق معايير Trend Template
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="minTrendScore" checked>
+                            <label class="form-check-label" for="minTrendScore">
+                                الحد الأدنى لدرجة Trend Template: 
+                            </label>
+                            <select class="form-select form-select-sm d-inline-block w-auto ms-2">
+                                <option value="5">5</option>
+                                <option value="6" selected>6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">نمط VCP</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="vcpPattern" checked>
+                            <label class="form-check-label" for="vcpPattern">
+                                البحث عن نمط VCP
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="vcpStage3">
+                            <label class="form-check-label" for="vcpStage3">
+                                المرحلة 3 فقط (جاهز للاختراق)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">معايير إضافية</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="highVolume" checked>
+                            <label class="form-check-label" for="highVolume">
+                                حجم تداول مرتفع
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="strongEarnings" checked>
+                            <label class="form-check-label" for="strongEarnings">
+                                نمو قوي في الأرباح
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-4">
+                        <label for="sector" class="form-label">القطاع</label>
+                        <select class="form-select" id="sector">
+                            <option value="all" selected>جميع القطاعات</option>
+                            <option value="technology">التكنولوجيا</option>
+                            <option value="healthcare">الرعاية الصحية</option>
+                            <option value="finance">المالية</option>
+                            <option value="energy">الطاقة</option>
+                            <option value="consumer">السلع الاستهلاكية</option>
+                            <option value="industrial">الصناعة</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="marketCap" class="form-label">القيمة السوقية</label>
+                        <select class="form-select" id="marketCap">
+                            <option value="all" selected>جميع القيم</option>
+                            <option value="large">كبيرة (أكثر من 10 مليار)</option>
+                            <option value="mid">متوسطة (2-10 مليار)</option>
+                            <option value="small">صغيرة (300 مليون - 2 مليار)</option>
+                            <option value="micro">متناهية الصغر (أقل من 300 مليون)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="maxResults" class="form-label">عدد النتائج</label>
+                        <select class="form-select" id="maxResults">
+                            <option value="10">10</option>
+                            <option value="25" selected>25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">فحص الأسهم</button>
+                        <button type="reset" class="btn btn-outline-secondary ms-2">إعادة تعيين</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- نتائج الفحص -->
+        <div id="screeningResults"></div>
+
+        <!-- معلومات إضافية -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="dashboard-card">
+                    <h3 class="dashboard-title">معايير Trend Template</h3>
+                    <p>Trend Template هو مجموعة من المعايير الفنية التي طورها مارك مينيرفيني لتحديد الأسهم ذات الاتجاه الصعودي القوي:</p>
+                    <ol>
+                        <li>السعر فوق المتوسطات المتحركة 150 و200 يوم</li>
+                        <li>المتوسط المتحرك 150 يوم فوق المتوسط المتحرك 200 يوم</li>
+                        <li>المتوسط المتحرك 200 يوم في اتجاه صعودي</li>
+                        <li>السعر فوق المتوسط المتحرك 50 يوم</li>
+                        <li>السعر على الأقل 30% فوق أدنى مستوى في 52 أسبوع</li>
+                        <li>السعر ضمن 25% من أعلى مستوى في 52 أسبوع</li>
+                        <li>مؤشر القوة النسبية RSI فوق 70</li>
+                        <li>المتوسط المتحرك 50 يوم فوق المتوسطات المتحركة 150 و200 يوم</li>
+                    </ol>
+                    <a href="about.html#trend-template" class="btn btn-outline-primary">تعرف على المزيد</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="dashboard-card">
+                    <h3 class="dashboard-title">نمط VCP</h3>
+                    <p>نمط VCP (Volatility Contraction Pattern) أو نمط انكماش التقلب هو نمط سعري طوره مارك مينيرفيني، ويتميز بانخفاض تدريجي في التقلب مع تشكيل قاعدة سعرية.</p>
+                    <p>يتكون النمط من ثلاث مراحل:</p>
+                    <ol>
+                        <li><strong>المرحلة 1:</strong> الارتفاع الأولي - ارتفاع قوي في السعر مع حجم تداول مرتفع.</li>
+                        <li><strong>المرحلة 2:</strong> التصحيح - تراجع في السعر بنسبة 20-30% مع انخفاض في حجم التداول.</li>
+                        <li><strong>المرحلة 3:</strong> الانكماش - تضييق في نطاق التداول مع انخفاض مستمر في التقلب وحجم التداول.</li>
+                    </ol>
+                    <p>بعد اكتمال النمط، يحدث اختراق لأعلى مع زيادة في حجم التداول، مما يشير إلى بداية موجة صعودية جديدة.</p>
+                    <a href="about.html#vcp" class="btn btn-outline-primary">تعرف على المزيد</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">SEBA</h4>
+                    <p>روبوت خبير الأسهم للتحليل - منصة ذكية لتحليل الأسهم وتقديم توصيات استثمارية مستوحاة من منهجية مارك مينيرفيني.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">الرئيسية</a></li>
+                        <li><a href="dashboard.html" class="footer-link">لوحة التحكم</a></li>
+                        <li><a href="analysis.html" class="footer-link">تحليل الأسهم</a></li>
+                        <li><a href="screening.html" class="footer-link">فحص الأسهم</a></li>
+                        <li><a href="chatbot.html" class="footer-link">روبوت المحادثة</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">الموارد</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="footer-link">عن المشروع</a></li>
+                        <li><a href="about.html#sepa" class="footer-link">منهجية SEPA</a></li>
+                        <li><a href="about.html#vcp" class="footer-link">نمط VCP</a></li>
+                        <li><a href="about.html#trend-template" class="footer-link">Trend Template</a></li>
+                        <li><a href="about.html#disclaimer" class="footer-link">إخلاء المسؤولية</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="#" class="footer-link"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+                        <li><a href="#" class="footer-link"><i class="fab fa-github me-2"></i>GitHub</a></li>
+                        <li><a href="mailto:info@seba.com" class="footer-link"><i class="fas fa-envelope me-2"></i>info@seba.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 SEBA - جميع الحقوق محفوظة</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="footer-link me-3">سياسة الخصوصية</a>
+                        <a href="#" class="footer-link">شروط الاستخدام</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

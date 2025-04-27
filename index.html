@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEBA - روبوت خبير الأسهم للتحليل</title>
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- الأنماط المخصصة -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- الترويسة -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-chart-line me-2"></i>SEBA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">لوحة التحكم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.html">تحليل الأسهم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="screening.html">فحص الأسهم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chatbot.html">روبوت المحادثة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عن المشروع</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-light">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="hero-title">SEBA - روبوت خبير الأسهم للتحليل</h1>
+                    <p class="hero-subtitle">منصة ذكية لتحليل الأسهم وتقديم توصيات استثمارية مستوحاة من منهجية مارك مينيرفيني</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="analysis.html" class="btn btn-primary btn-lg px-4 gap-3">ابدأ التحليل</a>
+                        <a href="about.html" class="btn btn-outline-light btn-lg px-4">تعرف علينا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الميزات -->
+    <section class="feature-section bg-light">
+        <div class="container">
+            <h2 class="section-title">ميزات النظام</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">تحليل فني متقدم</h3>
+                        <p>تحليل شامل للأسهم باستخدام منهجية SEPA، بما في ذلك المؤشرات الفنية المتقدمة واكتشاف أنماط الأسعار مثل نمط انكماش التقلب (VCP).</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">ذكاء اصطناعي</h3>
+                        <p>توليد تقارير تحليل مفصلة وتوصيات بلغة طبيعية باستخدام تقنيات الذكاء الاصطناعي المتقدمة، مما يجعل التحليل الفني سهل الفهم.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3 class="feature-title">فحص الأسهم</h3>
+                        <p>فحص الأسهم باستخدام معايير محددة مثل Trend Template ونمط VCP للعثور على أفضل فرص الاستثمار في السوق.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments-dollar"></i>
+                        </div>
+                        <h3 class="feature-title">روبوت محادثة</h3>
+                        <p>روبوت محادثة ذكي للإجابة على استفساراتك حول الأسهم والتداول ومنهجية SEPA ومفاهيم التداول المختلفة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3 class="feature-title">تنبيهات الأسعار</h3>
+                        <p>إنشاء وإدارة تنبيهات الأسعار للأسهم التي تهمك، مع إشعارات فورية عند الوصول إلى مستويات سعرية محددة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-title">محتوى تعليمي</h3>
+                        <p>محتوى تعليمي شامل حول منهجية SEPA ومفاهيم التداول المختلفة، مما يساعدك على تطوير مهاراتك في التداول.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم منهجية SEPA -->
+    <section class="feature-section">
+        <div class="container">
+            <h2 class="section-title">منهجية SEPA</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3>ما هي منهجية SEPA؟</h3>
+                    <p>منهجية SEPA (Specific Entry Point Analysis) أو تحليل نقاط الدخول المحددة هي منهجية طورها مارك مينيرفيني، وهي تركز على تحديد نقاط دخول دقيقة للأسهم ذات النمو العالي والزخم القوي.</p>
+                    <h3>المكونات الرئيسية لمنهجية SEPA:</h3>
+                    <ul>
+                        <li><strong>Trend Template:</strong> مجموعة من المعايير الفنية لتحديد الأسهم ذات الاتجاه الصعودي القوي.</li>
+                        <li><strong>نمط VCP:</strong> نمط انكماش التقلب، وهو نمط سعري يشير إلى احتمالية حدوث اختراق صعودي قوي.</li>
+                        <li><strong>إدارة المخاطر:</strong> استراتيجيات لتحديد نقاط الدخول ومستويات وقف الخسارة والأهداف السعرية.</li>
+                    </ul>
+                    <a href="about.html#sepa" class="btn btn-primary mt-3">تعرف على المزيد</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/sepa-methodology.png" alt="منهجية SEPA" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاشتراك في النشرة البريدية -->
+    <section class="feature-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">اشترك في نشرتنا البريدية</h2>
+                    <p class="mb-4">احصل على أحدث التحليلات والتوصيات والمحتوى التعليمي مباشرة إلى بريدك الإلكتروني.</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">اشتراك</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">SEBA</h4>
+                    <p>روبوت خبير الأسهم للتحليل - منصة ذكية لتحليل الأسهم وتقديم توصيات استثمارية مستوحاة من منهجية مارك مينيرفيني.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">الرئيسية</a></li>
+                        <li><a href="dashboard.html" class="footer-link">لوحة التحكم</a></li>
+                        <li><a href="analysis.html" class="footer-link">تحليل الأسهم</a></li>
+                        <li><a href="screening.html" class="footer-link">فحص الأسهم</a></li>
+                        <li><a href="chatbot.html" class="footer-link">روبوت المحادثة</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">الموارد</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="footer-link">عن المشروع</a></li>
+                        <li><a href="about.html#sepa" class="footer-link">منهجية SEPA</a></li>
+                        <li><a href="about.html#vcp" class="footer-link">نمط VCP</a></li>
+                        <li><a href="about.html#trend-template" class="footer-link">Trend Template</a></li>
+                        <li><a href="about.html#disclaimer" class="footer-link">إخلاء المسؤولية</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="#" class="footer-link"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+                        <li><a href="#" class="footer-link"><i class="fab fa-github me-2"></i>GitHub</a></li>
+                        <li><a href="mailto:info@seba.com" class="footer-link"><i class="fas fa-envelope me-2"></i>info@seba.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 SEBA - جميع الحقوق محفوظة</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="footer-link me-3">سياسة الخصوصية</a>
+                        <a href="#" class="footer-link">شروط الاستخدام</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
